@@ -1,2 +1,23 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class="container">
+  <h1 class="mt-5">Crear Nuevo Post</h1>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <%= form_with(model: @post, url: posts_path, method: "post") do |form| %>
+        <div class="mb-3">
+          <%= form.label :title, class: "form-label" %>
+          <%= form.text_field :title, class: "form-control" %>
+        </div>
+        <div class="mb-3">
+          <%= form.label :body, class: "form-label" %>
+          <%= form.text_area :body, class: "form-control", rows: 6 %>
+        </div>
+        <div class="mb-3">
+          <%= form.label :published_at, class: "form-label" %>
+          <%= form.datetime_local_field :published_at, class: "form-control" %>
+        </div>
+        <%= form.submit "Crear Post", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
