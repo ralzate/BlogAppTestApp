@@ -8,6 +8,7 @@
           <div class="card-body">
             <h2 class="card-title"><%= post.title %></h2>
             <p class="card-text"><strong>Fecha de Publicación:</strong> <%= post.published_at.strftime("%d/%m/%Y %H:%M") %></p>
+            <p class="card-text"><strong>Cuerpo:</strong> <%= post.body %></p> <!-- Agrega esta línea para mostrar el cuerpo del post -->
             <%= link_to "Ver Detalles", post_path(post), class: "btn btn-primary" %>
           </div>
         </div>
