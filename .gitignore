@@ -38,3 +38,6 @@
 !/app/assets/builds/.keep
 
 /node_modules
+
+# Ignorar archivos de configuración de la base de datos
+config/database.yml
